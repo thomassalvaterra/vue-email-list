@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Email</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Vue.js library -->
+    <script src="https://unpkg.com/vue@3.3.8/dist/vue.global.js"></script>
+    <!-- Axios library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Vue Email List</h1>
+        <br>
+        <ul>
+            <li v-for="item in userEmail">{{ userEmail }}</li>
+        </ul>
+        <br>
+        <button @click="generaEmail">Genera email</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
