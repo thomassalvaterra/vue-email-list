@@ -3,13 +3,13 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            user: "Utente Anonimo",
-            userEmail: ""
+            userEmail: []
         }
     },
     methods: {
         generaEmail() {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(resp => {
+                console.log(resp.data.response);
                 this.userEmail = resp.data.response;
                 console.log(this.userEmail);
             });
