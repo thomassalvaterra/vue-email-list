@@ -13,12 +13,16 @@
 <body>
     <div id="app">
         <h1>Vue Email List</h1>
+        
         <br>
-        <ul>
-            <li v-for="item in userEmail">{{ item }}</li>
-        </ul>
-        <br>
+
         <button @click="generaEmail">Genera email</button>
+
+        <br>
+
+        <ul v-if="userEmail.length > 9">
+            <li v-for="item in userEmail">{{ item }}</li>
+        </ul>               
     </div>
     <script src="main.js"></script>
 </body>
